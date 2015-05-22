@@ -9,7 +9,7 @@ use Omnipay\WorldPay\Message\PurchaseRequest;
 /**
  * WorldPay Gateway
  *
- * @link http://www.worldpay.com/support/kb/bg/htmlredirect/rhtml.html
+ * @link https://online.worldpay.com/docs
  */
 class Gateway extends AbstractGateway
 {
@@ -21,52 +21,29 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'installationId' => '',
-            'accountId' => '',
-            'secretWord' => '',
-            'callbackPassword' => '',
-            'testMode' => false,
+            'serviceKey' => 'T_S_9d79755c-bcc6-4205-8488-2a3b8771e777',
+            'clientKey' => 'T_C_0a1d72b4-39ec-4bc3-b558-35860dda8197'
         );
     }
 
-    public function getInstallationId()
+    public function getServiceKey()
     {
-        return $this->getParameter('installationId');
+        return $this->getParameter('serviceKey');
     }
 
-    public function setInstallationId($value)
+    public function setServiceKey($value)
     {
-        return $this->setParameter('installationId', $value);
+        return $this->setParameter('serviceKey', $value);
     }
 
-    public function getAccountId()
+    public function getClientKey()
     {
-        return $this->getParameter('accountId');
+        return $this->getParameter('clientKey');
     }
 
-    public function setAccountId($value)
+    public function setClientKey($value)
     {
-        return $this->setParameter('accountId', $value);
-    }
-
-    public function getSecretWord()
-    {
-        return $this->getParameter('secretWord');
-    }
-
-    public function setSecretWord($value)
-    {
-        return $this->setParameter('secretWord', $value);
-    }
-
-    public function getCallbackPassword()
-    {
-        return $this->getParameter('callbackPassword');
-    }
-
-    public function setCallbackPassword($value)
-    {
-        return $this->setParameter('callbackPassword', $value);
+        return $this->setParameter('clientKey', $value);
     }
 
     public function purchase(array $parameters = array())
@@ -78,4 +55,5 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\WorldPay\Message\CompletePurchaseRequest', $parameters);
     }
+
 }

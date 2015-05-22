@@ -9,47 +9,24 @@ use Omnipay\Common\Message\AbstractRequest;
  */
 class PurchaseRequest extends AbstractRequest
 {
-    protected $liveEndpoint = 'https://secure.worldpay.com/wcc/purchase';
-    protected $testEndpoint = 'https://secure-test.worldpay.com/wcc/purchase';
-
-    public function getInstallationId()
+    public function getServiceKey()
     {
-        return $this->getParameter('installationId');
+        return $this->getParameter('serviceKey');
     }
 
-    public function setInstallationId($value)
+    public function setServiceKey($value)
     {
-        return $this->setParameter('installationId', $value);
+        return $this->setParameter('serviceKey', $value);
     }
 
-    public function getAccountId()
+    public function getClientKey()
     {
-        return $this->getParameter('accountId');
+        return $this->getParameter('clientKey');
     }
 
-    public function setAccountId($value)
+    public function setClientKey($value)
     {
-        return $this->setParameter('accountId', $value);
-    }
-
-    public function getSecretWord()
-    {
-        return $this->getParameter('secretWord');
-    }
-
-    public function setSecretWord($value)
-    {
-        return $this->setParameter('secretWord', $value);
-    }
-
-    public function getCallbackPassword()
-    {
-        return $this->getParameter('callbackPassword');
-    }
-
-    public function setCallbackPassword($value)
-    {
-        return $this->setParameter('callbackPassword', $value);
+        return $this->setParameter('clientKey', $value);
     }
 
     public function getData()

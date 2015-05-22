@@ -10,16 +10,12 @@
         "payment",
         "worldpay"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-worldpay",
+    "homepage": "https://github.com/noeldavies/omnipay-worldpay",
     "license": "MIT",
     "authors": [
         {
-            "name": "Adrian Macneil",
-            "email": "adrian@adrianmacneil.com"
-        },
-        {
-            "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-worldpay/contributors"
+            "name": "Daniel Noel-Davies",
+            "email": "Daniel@NoelDavi.es"
         }
     ],
     "autoload": {
